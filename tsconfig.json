@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "outDir": "./.tsbuild/",
+        "skipLibCheck": true,
+        "target": "es2019",
+        "types": ["node", "@wdio/sync", "@wdio/mocha-framework"]
+    },
+    "include": [
+        "pageObjectComponents/**/*.ts",
+        "specs/**/*.ts",
+        "wdio.conf.ts"
+    ],
+}
