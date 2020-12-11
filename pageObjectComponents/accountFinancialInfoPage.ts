@@ -1,3 +1,5 @@
+import { logInfoMessage } from '../utils/logger';
+
 enum locators {
     addButton = '[data-testid=add-account-3]',
     interestRateTextField = '[data-testid=interestRate] input',
@@ -19,7 +21,7 @@ function setDataAndSubmit({ interestRate, minPayment, statementBalance }: Accoun
 
     browser.$(locators.addButton).click();
     browser.$(locators.addButton).waitForDisplayed({ reverse: true });
-    console.info('Provided account financial info and added account.');
+    logInfoMessage('Provided account financial info and added account.');
 }
 
 export { setDataAndSubmit };

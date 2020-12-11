@@ -1,3 +1,5 @@
+import { logInfoMessage } from '../utils/logger';
+
 enum locators {
     accountNameTextField = 'input[data-testid=nickname]',
     accountTypeDropDown = '[data-testid=type]',
@@ -22,7 +24,7 @@ function addAccountDetailsAndProceed(accountName: string, accountType: string): 
 
     browser.$(locators.nextButton).click();
     browser.$(locators.nextButton).waitForDisplayed({ reverse: true });
-    console.info('Provided account info and submitted.');
+    logInfoMessage('Provided account info and submitted.');
 }
 
 export { addAccountDetailsAndProceed };
