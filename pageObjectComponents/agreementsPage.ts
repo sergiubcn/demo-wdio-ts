@@ -1,11 +1,9 @@
-import { locators } from '../types/common/locators';
+enum locators {
+    promoAgreementOption = '[data-testid=creditorAgreementPROMO_PERIOD]',
+    nextButton = '[data-testid=add-account-2]',
+}
 
-const locators = {
-    promoAgreementOption: '[data-testid=creditorAgreementPROMO_PERIOD]',
-    nextButton: '[data-testid=add-account-2]',
-};
-
-function selectAgreementTypeAndSubmit() :void {
+function selectAgreementTypeAndSubmit(): void {
     browser.$(locators.promoAgreementOption).waitForDisplayed();
     browser.$(locators.promoAgreementOption).click();
     browser.$(locators.nextButton).click();

@@ -1,19 +1,17 @@
-import { locators } from '../types/common/locators';
+enum locators {
+    addButton = '[data-testid=add-account-3]',
+    interestRateTextField = '[data-testid=interestRate] input',
+    minPaymentTextField = '[data-testid=minMonthlyPayment]',
+    statementBalanceTextField = '[data-testid=statementBalance]',
+}
 
-const locators = {
-    addButton: '[data-testid=add-account-3]',
-    interestRateTextField: '[data-testid=interestRate] input',
-    minPaymentTextField: '[data-testid=minMonthlyPayment]',
-    statementBalanceTextField: '[data-testid=statementBalance]',
-};
+interface AccountFinancialData {
+    interestRate: number;
+    minPayment: number;
+    statementBalance: number;
+}
 
-type accountFinancialData = {
-    interestRate: number,
-    minPayment: number,
-    statementBalance: number,
-};
-
-function setDataAndSubmit({ interestRate, minPayment, statementBalance } :accountFinancialData) :void {
+function setDataAndSubmit({ interestRate, minPayment, statementBalance }: AccountFinancialData): void {
     browser.$(locators.statementBalanceTextField).waitForDisplayed();
     browser.$(locators.statementBalanceTextField).setValue(statementBalance);
     browser.$(locators.minPaymentTextField).setValue(minPayment);

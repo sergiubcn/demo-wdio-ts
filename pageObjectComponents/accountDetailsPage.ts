@@ -1,12 +1,10 @@
-import { locators } from '../types/common/locators';
+enum locators {
+    accountNameTextField = 'input[data-testid=nickname]',
+    accountTypeDropDown = '[data-testid=type]',
+    nextButton = '[data-testid=add-account-1]',
+}
 
-const locators = {
-    accountNameTextField: 'input[data-testid=nickname]',
-    accountTypeDropDown: '[data-testid=type]',
-    nextButton: '[data-testid=add-account-1]',
-};
-
-function dropDownOptionLocator(accountType :string) :string {
+function dropDownOptionLocator(accountType: string): string {
     return `//div[@data-testid='type']//span[text()='${accountType}']/..`;
 }
 
@@ -15,7 +13,7 @@ function dropDownOptionLocator(accountType :string) :string {
  * @param {string} accountName The account's name.
  * @param {string} accountType The account's type.
  */
-function addAccountDetailsAndProceed (accountName :string, accountType :string) :void {
+function addAccountDetailsAndProceed(accountName: string, accountType: string): void {
     browser.$(locators.accountTypeDropDown).waitForDisplayed();
     browser.$(locators.accountTypeDropDown).click();
     browser.$(dropDownOptionLocator(accountType)).click();

@@ -7,7 +7,7 @@ import { selectAgreementTypeAndSubmit } from '../pageObjectComponents/agreements
 import { setDataAndSubmit } from '../pageObjectComponents/accountFinancialInfoPage';
 import { accountNamePartialLocator, checkIfAccountExistsInList } from '../pageObjectComponents/myAccountsPage';
 
-import accountData from '../data/accountData';
+import { accountData } from '../data/accountData';
 
 describe('Add account', () => {
     it('should add an account to list', () => {
@@ -20,10 +20,10 @@ describe('Add account', () => {
 
         selectAgreementTypeAndSubmit();
 
-        setDataAndSubmit({ 
-            interestRate: accountData.interestRate, 
-            minPayment: accountData.minPayment, 
-            statementBalance: accountData.statementBalance 
+        setDataAndSubmit({
+            interestRate: accountData.interestRate,
+            minPayment: accountData.minPayment,
+            statementBalance: accountData.statementBalance,
         });
 
         assert.ok(checkIfAccountExistsInList());

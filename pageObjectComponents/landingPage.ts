@@ -1,19 +1,17 @@
-import { locators } from '../types/common/locators';
+enum locators {
+    getStartedButton = '[data-testid=getStarted]',
+}
 
-const locators = {
-    getStartedButton: '[data-testid=getStarted]',
-};
-
-function navigateToLandingPage () :void {
+function navigateToLandingPage(): void {
     browser.url('');
     browser.$(locators.getStartedButton).waitForDisplayed();
 }
 
-function proceedToAddAccount() :void {
+function proceedToAddAccount(): void {
     const el = browser.$(locators.getStartedButton);
     el.waitForDisplayed();
     el.click();
     el.waitForDisplayed({ reverse: true, timeout: 1500 });
 }
 
-export { navigateToLandingPage, proceedToAddAccount }
+export { navigateToLandingPage, proceedToAddAccount };

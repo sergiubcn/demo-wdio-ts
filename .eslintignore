@@ -1,0 +1,10 @@
+# Modules
+node_modules
+
+# Build Output
+.tsbuild
+
+# Configs
+.eslintrc.js
+wdio.conf.js
+.prettierrc.js

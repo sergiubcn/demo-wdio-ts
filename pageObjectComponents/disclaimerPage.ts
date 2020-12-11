@@ -1,10 +1,8 @@
-import { locators } from '../types/common/locators';
+enum locators {
+    nextButton = '[data-testid=proceed-to-add-account-button]',
+}
 
-const locators = {
-    nextButton: '[data-testid=proceed-to-add-account-button]',
-};
-
-function acknowledgeDisclaimerAndProceed() :void {
+function acknowledgeDisclaimerAndProceed(): void {
     const el = browser.$(locators.nextButton);
     el.waitForDisplayed();
     el.click();
