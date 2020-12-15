@@ -13,6 +13,14 @@ interface AccountFinancialData {
     statementBalance: number;
 }
 
+/**
+ * Fills in the account's financial data and submits the form.
+ * After this flow step the account is created.
+ * @param0 {Object} financialData 
+ * @param {number} financialData.interestRate  The account's interest rate.
+ * @param {number} financialData.minPayment The minimum payment for each month.
+ * @param {number} financialData.statementBalance The account's statement balance. 
+ */
 function setDataAndSubmit({ interestRate, minPayment, statementBalance }: AccountFinancialData): void {
     browser.$(locators.statementBalanceTextField).waitForDisplayed();
     browser.$(locators.statementBalanceTextField).setValue(statementBalance);

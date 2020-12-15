@@ -11,7 +11,7 @@ function dropDownOptionLocator(accountType: string): string {
 }
 
 /**
- * Selects the accounts' type, adds the account's name and submits the form.
+ * Selects the account's type, adds the account's name and submits the form.
  * @param {string} accountName The account's name.
  * @param {string} accountType The account's type.
  */
