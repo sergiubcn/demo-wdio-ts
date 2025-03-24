@@ -1,10 +1,24 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "outDir": "./.tsbuild/",
-        "skipLibCheck": true,
-        "target": "es2019",
-        "types": ["node", "@wdio/sync", "@wdio/mocha-framework"]
-    },
-    "include": ["pageObjectComponents/**/*.ts", "specs/**/*.ts", "wdio.conf.ts"]
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
+    "types": [
+      "node",
+      "@wdio/globals/types",
+      "expect-webdriverio",
+      "@wdio/mocha-framework"
+    ],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["/**/*.ts"]
 }

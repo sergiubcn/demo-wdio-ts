@@ -1,40 +1,33 @@
 {
-    "name": "wdio-typescript-demo",
-    "version": "1.0.0",
-    "description": "Demo repo for WDIO with TS",
-    "main": "index.js",
-    "scripts": {
-        "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
-        "prettier": "npx prettier --write .",
-        "test": "wdio wdio.conf.js"
-    },
-    "keywords": [
-        "webdriverio",
-        "test",
-        "automation",
-        "typescript"
-    ],
-    "author": "Sergiu Bacanu",
-    "license": "ISC",
-    "devDependencies": {
-        "@types/mocha": "^8.0.4",
-        "@typescript-eslint/eslint-plugin": "^4.9.1",
-        "@typescript-eslint/parser": "^4.9.1",
-        "@wdio/cli": "^6.7.4",
-        "@wdio/local-runner": "^6.7.3",
-        "@wdio/mocha-framework": "^6.7.3",
-        "@wdio/spec-reporter": "^6.7.0",
-        "@wdio/sync": "^6.7.3",
-        "chromedriver": "^86.0.0",
-        "eslint": "^7.15.0",
-        "eslint-config-prettier": "^7.0.0",
-        "eslint-plugin-prettier": "^3.2.0",
-        "knex": "^0.21.12",
-        "prettier": "^2.2.1",
-        "ts-node": "^9.0.0",
-        "typescript": "^4.0.5",
-        "wdio-chromedriver-service": "^6.0.4",
-        "webdriverio": "^6.10.0"
-    },
-    "dependencies": {}
+  "name": "wdio-typescript-demo",
+  "version": "1.0.0",
+  "description": "Demo repo for WDIO with TS",
+  "main": "index.js",
+  "scripts": {
+    "style": "npx eslint . --fix && npx prettier --write .",
+    "test": "wdio wdio.conf.js",
+    "wdio": "wdio run ./wdio.conf.ts"
+  },
+  "keywords": [
+    "webdriverio",
+    "test",
+    "automation",
+    "typescript"
+  ],
+  "author": "Sergiu Bacanu",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@wdio/cli": "^9.12.1",
+    "@wdio/local-runner": "^9.12.1",
+    "@wdio/mocha-framework": "^9.12.1",
+    "@wdio/spec-reporter": "^9.11.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript-eslint": "^8.27.0",
+    "webdriverio": "^9.12.1"
+  }
 }
