@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "style": "npx eslint . --fix && npx prettier --write .",
-    "test": "wdio wdio.conf.js",
     "wdio": "wdio run ./wdio.conf.ts"
   },
   "keywords": [
