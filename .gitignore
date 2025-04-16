@@ -1,11 +1,14 @@
+# Environment variables
+.env
+
+# Git
+.git
+
+# IDE
+.DS_Store
+
 # Modules
 node_modules
 
 # TS Build files
 .tsbuild
-
-# Git
-.git
-
-# Environment variables
-.env

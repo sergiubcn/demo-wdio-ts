@@ -4,7 +4,7 @@ import { header } from "../page-component-objects/header";
 import { lockedOutUser, validUser } from "../../data/user-data";
 import { loginPage } from "../page-component-objects/login-page";
 
-describe("Authentication", () => {
+describe("Authentication - Functional paradigm", () => {
   it("Should allow a user to authenticate with valid credentials", async () => {
     const loginPg = loginPage();
     await loginPg.loadPage();

@@ -5,7 +5,7 @@ import { header } from "../page-component-objects/header";
 import { productData } from "../../data/product-data";
 import { validUser } from "../../data/user-data";
 
-describe("Products", () => {
+describe("Products - Functional paradigm", () => {
   before(async () => {
     await browser.url("/");
     await browser.addCookie({
